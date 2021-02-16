@@ -13,7 +13,8 @@
 rus = {'One' : 'Один',
        'Two' : 'Два',
        'Three' : 'Три',
-       'Four' : 'Четыре'}
+       'Four' : 'Четыре',
+       'Five': 'Пять'}
 
 new = []
 
@@ -26,7 +27,6 @@ with open('numbers.txt', 'r') as dig:
         i = i.split(' ', 2)
         new.append(rus[i[0]] + ' : ' + i[2])
     print(new)
-
 
 name_of_new_file = input('Введите название файла, в который хоите занести измененные данные: ')
 f = open(name_of_new_file, 'w')

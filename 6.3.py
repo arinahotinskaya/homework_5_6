@@ -11,15 +11,19 @@
 '''
 
 class Worker:
-    name = None
-    surname = None
-    position = None
-    income__ = None
+    def __init__(self, name, surname, position, wage, bonus):
+        self.name = name
+        self.surname = surname
+        self.position = position
+        self._income = {"wage": wage, "bonus": bonus}
 
 class Position(Worker):
     def get_full_name(self):
-        name = input()
-        surname = input()
+        print(f'{self.name} {self.surname} - полное имя')
 
     def get_total_income(self):
-        
+        print(f'Доход: {self._income["wage"]} - оклад, {self._income["bonus"]} - премия')
+
+data = Position('Мария', 'Живага', 'официант', 10000, 2000)
+data.get_full_name()
+data.get_total_income()

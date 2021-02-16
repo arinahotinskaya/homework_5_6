@@ -4,7 +4,6 @@
 Об окончании ввода данных свидетельствует пустая строка.
 '''
 
-
 my_file = input('Enter name of file: ')
 f = open(my_file, 'w')
 print(type(f))
